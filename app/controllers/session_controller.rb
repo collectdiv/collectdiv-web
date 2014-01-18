@@ -20,6 +20,6 @@ class SessionsController < ApplicationController
     # Ends a session, e.g. the user logs out
     def destroy
         session[:user_id] = nil
-        redirect_to root_url, :notice => 'Logged out!'
+        redirect_to '/', :notice => 'Logged out!'
     end
 end

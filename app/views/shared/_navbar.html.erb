@@ -21,8 +21,10 @@
             <li><a href="#contact">Contact</a></li>
   
             <!-- if logged in, display your name and let you log out with a button -->
-            
-            <li><a href="/logout">Logout</a></li>
+            <% if session[:user_id] != nil %>
+              <li><a href="/logout">Logout</a></li>
+              <li><a href="#"><%= session[:user_id] %></a></li>
+            <% end %>
 
 <!--
             Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns 
