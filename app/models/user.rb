@@ -1,3 +1,4 @@
+# User model for pretty much all model stuff.
 class User < ActiveRecord::Base
 
   attr_accessor :password
