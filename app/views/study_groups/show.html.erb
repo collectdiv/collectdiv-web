@@ -1,4 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div id="push_down" style="padding-top:100px;">
+</div>
 
-<%= link_to 'Edit', edit_study_group_path(@study_group) %> |
-<%= link_to 'Back', study_groups_path %>
+<div class="container">
+
+  <div class="container-fluid">
+    <h1><%= @study_group.name %></h1>
+    <div class="row-fluid">
+      <div class="span5">
+        <%= image_tag 'advanced_django.png' %>
+      </div> <!-- .span5 -->
+      <div class="span5">
+        <%= @study_group.description %>
+      </div> <!-- .span5 -->
+    </div> <!-- fluid-row -->
+    <div class="row-fluid">
+      <div class="span5">
+        sign up
+      </div>
+    </div> <!-- fluid-row -->
+  </div> <!-- .container-fluid -->
+
+ 
+  <p id="notice"><%= notice %></p>
+
+  <%= link_to 'Edit', edit_study_group_path(@study_group) %> |
+  <%= link_to 'Back', study_groups_path %>
+</div> <!-- .container -->

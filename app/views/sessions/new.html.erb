@@ -8,17 +8,17 @@
 <div class="container">
   
 <h1><%= title %></h1>
-<%= form_for(:session, :url => sessions_path) do |f| %>
+<%= form_tag  sessions_path do |f| %>
     <div class="field">
-        <%= f.label :username %><br />
-        <%= f.text_field :username %>
+        <%= label_tag :username %><br />
+        <%= text_field_tag :username, params[:username] %>
     </div>
     <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password %>
+        <%= label_tag :password %><br />
+        <%= password_field_tag :password, params[:password] %>
     </div>
     <div class="actions">
-        <%= f.submit "Sign in" %>
+        <%= submit_tag "Sign in" %>
     </div>
 <% end %>
 <p>New user? <%= link_to "Sign up now!" %></p>

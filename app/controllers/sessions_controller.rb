@@ -6,8 +6,10 @@ class SessionsController < ApplicationController
     
     # Creates a new session by authenticating the user and creating a session variable.
     def create
+      puts 'debug message: create new session'
         user = User.authenticate(params[:username], params[:password])
         if user.nil?
+            puts 'There was an error trying to log in'
             flash.now[:error] = 'Invalid username or password'
             @title = "Sign in"
             render 'new'

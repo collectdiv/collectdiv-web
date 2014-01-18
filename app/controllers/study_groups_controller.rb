@@ -10,6 +10,10 @@ class StudyGroupsController < ApplicationController
   # GET /study_groups/1
   # GET /study_groups/1.json
   def show
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render :json => @item }
+    end
   end
 
   # GET /study_groups/new
