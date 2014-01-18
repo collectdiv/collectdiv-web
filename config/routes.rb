@@ -1,5 +1,6 @@
 CollectdivWeb::Application.routes.draw do
   resources :study_groups
+  resources :reservations
 
   resources :users
   resources :sessions
