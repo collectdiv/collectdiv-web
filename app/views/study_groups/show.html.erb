@@ -37,7 +37,11 @@ function slideOver(event) {
           <input type="text" name="billing-city" placeholder="City"> <input type="text" style="width: 60px" name="billing-state" placeholder="State" /> <input type="text" name="billing-zip" placeholder="Zipcode" style="width: 80px"><br />
           <input type="text" name="credit-card-number" placeholder="Credit Card Number"> </input>
           <input type="text" name="cvv-number" placeholder="CVV Number" style="width: 90px" /><br />
-          <a class="btn btn-success">Sign me up!</a>
+          
+          <%= form_for(:reservation, {:url => '/reservations' }) do |f| %>
+            <%= f.hidden_field 'study_group_id', {:value => '1'} %>
+            <%= f.submit 'Sign up!', {:class => 'btn btn-success'} %>
+          <% end %>
         </div>
       
 
