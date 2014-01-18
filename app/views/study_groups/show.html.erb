@@ -4,7 +4,11 @@
 <script type="text/javascript">
 
 function slideOver(event) { 
-  $('#reserve-my-spot-holder').toggle();
+  $('#hide-me').fadeOut(500, function() {
+      $('#show-me').fadeIn();
+      })
+
+
 }
 </script>
 
@@ -22,27 +26,32 @@ function slideOver(event) {
     </div> <!-- fluid-row -->
     <div class="row-fluid">
       <div class="span5" style="padding-top: 20px">
-        <a class="btn btn-success" onclick="slideOver">Reserve my spot</a>
+        <div id="hide-me">
+          <a class="btn btn-success" onclick="slideOver()">Reserve my spot</a>
+        </div>
+        <div id="show-me" style="display: none">
+          Ready to go? Give us some money so Austin can buy his yacht.<br /><br />
+
+          <input type="text" name="name" placeholder="Name on the card" /><br />
+          <input type="text" name="billing-address" placeholder="Billing Street Address" /><br />
+          <input type="text" name="billing-city" placeholder="City"> <input type="text" style="width: 60px" name="billing-state" placeholder="State" /> <input type="text" name="billing-zip" placeholder="Zipcode" style="width: 80px"><br />
+          <input type="text" name="credit-card-number" placeholder="Credit Card Number"> </input>
+          <input type="text" name="cvv-number" placeholder="CVV Number" style="width: 90px" /><br />
+          <a class="btn btn-success">Sign me up!</a>
+        </div>
+      
+
       </div>
-
-      <div id="reserve-my-spot-holder" class="span5">
-        Ready to go? Give us some money so Austin can buy his yacht.<br /><br />
-
-        <input type="text" name="name" placeholder="Name on the card" /><br />
-        <input type="text" name="billing-address" placeholder="Billing Street Address" /><br />
-        <input type="text" name="billing-city" placeholder="City"> <input type="text" style="width: 60px" name="billing-state" placeholder="State" /> <input type="text" name="billing-zip" placeholder="Zipcode" style="width: 80px"><br />
-        <input type="text" name="credit-card-number" placeholder="Credit Card Number"> </input>
-        <input type="text" name="cvv-number" placeholder="CVV Number" style="width: 90px" /><br />
-        <a class="btn btn-success">Sign me up!</a>
-      </div>
+    </div>
 
 
-    </div> <!-- fluid-row -->
-  </div> <!-- .container-fluid -->
 
- 
-  <p id="notice"><%= notice %></p>
+  </div> <!-- fluid-row -->
+</div> <!-- .container-fluid -->
 
-  <%= link_to 'Edit', edit_study_group_path(@study_group) %> |
-  <%= link_to 'Back', study_groups_path %>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_study_group_path(@study_group) %> |
+<%= link_to 'Back', study_groups_path %>
 </div> <!-- .container -->
