@@ -40,6 +40,9 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'protected_attributes'
 
+# show me the money!
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
