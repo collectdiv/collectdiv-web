@@ -22,8 +22,12 @@
   
             <!-- if logged in, display your name and let you log out with a button -->
             <% if session[:user_id] != nil %>
-              <li><a href="/logout">Logout</a></li>
-              <li><a href="#"><%= session[:user_id] %></a></li>
+              <% id = session[:user_id] %>
+              <% @temp = User.find(session[:user_id]) %>
+              
+              <li><a href="/logout"><%= @temp.email%> Logout</a></li>
+            <% else %>
+              <li><a href="/signin">Sign in</a></li>
             <% end %>
 
 <!--

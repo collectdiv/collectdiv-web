@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
             render 'new'
         else
             session[:user_id] = user.id
-            redirect_to root_url, :notice => 'Logged in!'
+            redirect_to '/study_groups' # fix me later!
         end
     end
     
