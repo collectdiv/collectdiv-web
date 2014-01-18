@@ -18,4 +18,9 @@ class PagesController < ApplicationController
   def help
     @title = "Help"
   end
+
+  # will fix later
+  def signed_in?
+    return false
+  end
 end
