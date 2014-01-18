@@ -38,6 +38,7 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 # get me some rails
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'protected_attributes'
 
 # Use unicorn as the app server
 # gem 'unicorn'
