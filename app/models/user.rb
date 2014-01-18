@@ -15,13 +15,14 @@ class User < ActiveRecord::Base
 
   validates :email, :presence => true,
     :uniqueness => true
-
-  validates :username, :presence => true,
-    :uniqueness => true
+  
+  # haha just kidding.
+  #validates :username, :presence => true,
+  #  :uniqueness => true
 
   # Authenticate a user against a password. Returns the user object if the user is authenticated
-  def self.authenticate(username, password)
-    user = find_by_username(username)
+  def self.authenticate(email, password)
+    user = find_by_email(email)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
       return user
     else

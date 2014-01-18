@@ -1,6 +1,13 @@
 <div id="push_down" style="padding-top:100px;">
 </div>
 
+<script type="text/javascript">
+
+function slideOver(event) { 
+  $('#reserve-my-spot-holder').toggle();
+}
+</script>
+
 <div class="container">
 
   <div class="container-fluid">
@@ -14,9 +21,22 @@
       </div> <!-- .span5 -->
     </div> <!-- fluid-row -->
     <div class="row-fluid">
-      <div class="span5">
-        sign up
+      <div class="span5" style="padding-top: 20px">
+        <a class="btn btn-success" onclick="slideOver">Reserve my spot</a>
       </div>
+
+      <div id="reserve-my-spot-holder" class="span5">
+        Ready to go? Give us some money so Austin can buy his yacht.<br /><br />
+
+        <input type="text" name="name" placeholder="Name on the card" /><br />
+        <input type="text" name="billing-address" placeholder="Billing Street Address" /><br />
+        <input type="text" name="billing-city" placeholder="City"> <input type="text" style="width: 60px" name="billing-state" placeholder="State" /> <input type="text" name="billing-zip" placeholder="Zipcode" style="width: 80px"><br />
+        <input type="text" name="credit-card-number" placeholder="Credit Card Number"> </input>
+        <input type="text" name="cvv-number" placeholder="CVV Number" style="width: 90px" /><br />
+        <a class="btn btn-success">Sign me up!</a>
+      </div>
+
+
     </div> <!-- fluid-row -->
   </div> <!-- .container-fluid -->
 
