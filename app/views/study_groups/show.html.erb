@@ -18,7 +18,7 @@ function slideOver(event) {
     <h1><%= @study_group.name %></h1>
     <div class="row-fluid">
       <div class="span5">
-        <%= image_tag @study_group.logo.url %>
+        <%= image_tag @study_group.logo_path %>
       </div> <!-- .span5 -->
       <div class="span5">
         <%= @study_group.description %>
@@ -30,7 +30,7 @@ function slideOver(event) {
           <a class="btn btn-success" onclick="slideOver()">Reserve my spot</a>
         </div>
         <div id="show-me" style="display: none">
-          Ready to go? Give us some money so Austin can buy his yacht.<br /><br />
+          Ready to go?<br /><br />
 
           <input type="text" name="name" placeholder="Name on the card" /><br />
           <input type="text" name="billing-address" placeholder="Billing Street Address" /><br />

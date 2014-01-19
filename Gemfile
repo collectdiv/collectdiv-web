@@ -44,7 +44,8 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 
 # Paperclip so we can attach images to study groups
-gem "paperclip", "~> 3.0"
+#gem "paperclip", '~>3.0'
+gem "paperclip_database", "~> 2.0"
 
 # Gravatar!
 gem 'gravatar_image_tag'
