@@ -12,6 +12,7 @@ CollectdivWeb::Application.routes.draw do
 
   get 'signin' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
+  get 'signup' => 'users#new'
 
   root 'pages#home'
 
