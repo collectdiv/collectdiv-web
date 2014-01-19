@@ -42,6 +42,13 @@ gem 'protected_attributes'
 # show me the money!
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+
+# Paperclip so we can attach images to study groups
+gem "paperclip", "~> 3.0"
+
+# Gravatar!
+gem 'gravatar_image_tag'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
