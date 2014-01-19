@@ -37,10 +37,10 @@ end
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
 # get me some rails
-gem 'less-rails'
-gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass', '~> 3.0.1.0.rc'
 gem 'protected_attributes'
 
+# show me the money!
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # Use unicorn as the app server

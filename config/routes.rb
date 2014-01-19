@@ -4,12 +4,15 @@ CollectdivWeb::Application.routes.draw do
 
   resources :users
   resources :sessions
+  
+  resources :charges
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   get 'signin' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
+  get 'signup' => 'users#new'
 
   root 'pages#home'
 

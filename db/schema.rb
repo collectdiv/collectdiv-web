@@ -43,9 +43,6 @@ ActiveRecord::Schema.define(version: 20140119030613) do
   end
 
   create_table "study_groups", force: true do |t|
-    t.string   "name"
-    t.date     "start_date"
-    t.date     "end_date"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"

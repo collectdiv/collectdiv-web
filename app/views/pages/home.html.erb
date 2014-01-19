@@ -1,3 +1,63 @@
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h1>Self taught doesn't have to mean learning alone.</h1>
+					<form class="form-inline" role="form">
+					  <button type="submit" class="btn btn-warning btn-lg">View groups forming now!</button>
+					</form>					
+				</div><!-- /col-lg-6 -->
+				<div class="col-lg-6">
+					<%= image_tag "laptop.png", :class => "img-responsive" %>
+				</div><!-- /col-lg-6 -->
+				
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
 
-<%= render 'shared/carousel' %>
-<%= render 'shared/columns' %>
+
+	<div class="container home-container">
+		<div class="row mt centered">
+			<div class="col-lg-6 col-lg-offset-3">
+				<h1>Month-long virtual study groups for programmers.</h1>
+				<h3>Meet weekly online around a project or course with an experienced programmer. Delve deeper, expand your network and get shit done.</h3>
+			</div>
+		</div><!-- /row -->
+		
+		<div class="row mt centered">
+			<div class="col-lg-4">
+				<center><%= image_tag "hartlrails.png", :class => "img-responsive" %></center>
+				<h4>Michael Hartl’s Ruby on Rails Tutorial</h4>
+				<small>Starting: February 5</small>
+				<p>The quintessential Ruby on Rails tutorial. Challenging, but fun, you'll most certainly complete this resource in one month with the support of a collect<span><</span>div<span>></span>.</p>
+                <button type="submit" class="btn btn-warning btn-lg">Join Group</button>
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-4">
+				<center><%= image_tag "Codecademy_logo.png", :class => "img-responsive" %></center>
+				<h4>Codecadmy Javascript track</h4>
+				<small>Starting: January 30</small>
+				<p>Go through this 16 module introduction to JavaScript with a group of your peers. By the end of the month you'll be well on your way to building interactive websites and games.</p>
+                <button type="submit" class="btn btn-warning btn-lg">Join Group</button>
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-4">
+				<center><%= image_tag "codeschool.png", :class => "img-responsive" %></center>
+				<h4>Code School Coffeescript</h4>
+				<small>Starting: February 3</small>
+				<p>Would you like a little cream with your CoffeeScript? If you've tackled JavaScript, why not spend a month in this group and learn how to do more with less code.</p>
+                <button type="submit" class="btn btn-warning btn-lg">Join Group</button>
+			</div><!--/col-lg-4 -->
+			
+		</div><!-- /row -->
+	</div><!-- /container -->
+	
+	<div class="container">
+		<hr>
+		<div class="row centered">
+			<div class="col-lg-6 col-lg-offset-3">
+				<h4><%= link_to "View More Groups", study_groups_path %></h4>					
+			</div>
+			<div class="col-lg-3"></div>
+		</div><!-- /row -->
+	</div><!-- /container -->
