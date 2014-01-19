@@ -11,7 +11,13 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Sign Up", signup_path %></li>
+            <% if !session[:user_id] %>
+              <li><%= link_to "Sign Up", signup_path %></li>
+            <% else %>
+              <% user = User.find(session[:user_id]) %>
+              <li><%= link_to "Hi there, #{user.email}, check out the available study groups", study_groups_path %></li>
+              <li><%= link_to "Logout", {:controller => 'sessions', :action => 'destroy'} %></li>
+            <% end %>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
