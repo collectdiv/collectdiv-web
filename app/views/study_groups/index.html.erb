@@ -6,53 +6,16 @@
   <h1>Available Study Groups</h1>
 
   <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span5">
-        <h2>Ruby on Rails for Beginners</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn" href="2">View details &raquo;</a></p> <!-- yeah i'm hard coding this. it's 1 am -->
-      </div> <!-- span4 -->
-      <div class="span5">
-        <h2>Advanced Django</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn" href="1">View details &raquo;</a></p>
-      </div> <!-- span4 -->
 
-
-
-    </div> <!-- row fluid -->
-    <div class="row-fluid">
-      <div class="span5">
-        <h2>CoffeeScript: Your New Best Friend</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn" href="3">View details &raquo;</a></p>
-      </div> <!-- span4 -->
-
-    </div>
+      <div class="row-fluid">
+          <% @study_groups.each do |g| %>
+              <div class="span12">
+                  <h2><%= g.name %></h2>
+                  <p><%= g.description %></p>
+                  <p>
+                     <%= link_to "View details &raquo;".html_safe, study_group_path(g), {:class => 'btn'} %>
+                  </p>
+              </div> <!-- .span12 -->
+        <% end %>
+    </div> <!-- .row-fluid -->
   </div> <!-- container-fluid -->
-
-
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
-    <% @study_groups.each do |study_group| %>
-      <tr>
-      <td><%= link_to 'Show', study_group %></td>
-      <td><%= link_to 'Edit', edit_study_group_path(study_group) %></td>
-      <td><%= link_to 'Destroy', study_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-</div>
-<%= link_to 'New Study group', new_study_group_path %>
