@@ -14,7 +14,10 @@
 <table>
     <tr>
         <td>Name</td><td><%= f.text_field :name %></td>
-    </tr>
+      </tr>
+      <tr>
+        <td>Logo</td><td><%= f.file_field :logo %></td>
+      </tr>
     <tr>
         <td>Description</td><td><%= f.text_area :description, {:cols => '60', :rows => '10'} %></td>
     </tr>
