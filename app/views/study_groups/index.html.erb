@@ -11,7 +11,7 @@
           <% @study_groups.each do |g| %>
               <div class="span12">
                   <h2><%= g.name %></h2>
-                  <p><%= g.description.html_safe %></p>
+                  <p><%= simple_format g.description.html_safe %></p>
                   <p>
                      <%= link_to "View details &raquo;".html_safe, study_group_path(g), {:class => 'btn'} %>
                   </p>
