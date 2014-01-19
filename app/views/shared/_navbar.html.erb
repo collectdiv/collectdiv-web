@@ -13,6 +13,7 @@
           <ul class="nav navbar-nav navbar-right">
             <% if !session[:user_id] %>
               <li><%= link_to "Sign Up", signup_path %></li>
+              <li><%= link_to "Sign In", signin_path %></li>
             <% else %>
                 <% user = User.find(session[:user_id]) %>
                 <li><%= link_to( image_tag( gravatar_image_url(user.email, :filetype => :png, :size => 30))) %></li>
