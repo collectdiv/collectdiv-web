@@ -18,7 +18,7 @@ function slideOver(event) {
     <h1><%= @study_group.name %></h1>
     <div class="row-fluid">
       <div class="span5">
-        <%= image_tag 'advanced_django.png' %>
+        <%= image_tag @study_group.logo.url %>
       </div> <!-- .span5 -->
       <div class="span5">
         <%= @study_group.description %>
