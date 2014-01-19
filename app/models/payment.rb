@@ -4,6 +4,6 @@
 class Payment < ActiveRecord::Base
   attr_accessible :email, :stripe_token, :success
 
-  has_one :user
+  belongs_to :user
   
 end

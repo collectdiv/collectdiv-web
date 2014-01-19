@@ -32,7 +32,7 @@ class ReservationsController < ApplicationController
     payment = Payment.new
     payment.user = user
     payment.email = email
-    payment.token = token
+    payment.stripe_token = token
     payment.success = true
     
     # Get the credit card details submitted by the form 
@@ -46,6 +46,8 @@ class ReservationsController < ApplicationController
       puts e
       payment.success = false
     end
+
+    payment.save
     
   end
 

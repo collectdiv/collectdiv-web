@@ -16,11 +16,13 @@ ActiveRecord::Schema.define(version: 20140119030613) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "payments_tables", force: true do |t|
-    t.string  "user_id"
-    t.string  "email"
-    t.string  "stripe_token"
-    t.boolean "success"
+  create_table "payments", force: true do |t|
+    t.integer  "user_id"
+    t.string   "email"
+    t.string   "stripe_token"
+    t.boolean  "success"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "reservations", force: true do |t|
