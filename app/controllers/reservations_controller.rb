@@ -13,10 +13,33 @@ class ReservationsController < ApplicationController
     @reservation.study_group = @group
     @reservation.save
 
+    billing_email = params[:stripeEmail]
+    stripe_token = params[:stripeToken]
+
+    charge_stripe(billing_email, stripe_token)
+
   end
 
   def reservation_params
     params[:reservation]
   end
+
+  def charge_stripe(email, token)
+    # Set your secret key: remember to change this to your live secret key in production 
+    # # See your keys here https://manage.stripe.com/account 
+    Stripe.api_key = "sk_test_j4NSp807OmwYpaHl4NgncT5j" 
+    
+    # Get the credit card details submitted by the form 
+    # Create the charge on Stripe's servers - this will charge the user's card begin charge = 
+    Stripe::Charge.create( :amount => 1000, # amount in cents, 
+                           :currency => "usd", :card => token, 
+                           :description => email ) 
+    rescue Stripe::CardError => e # The card has been declined end
+      puts 'There was an error'
+
+    
+  end
+
+
 
 end

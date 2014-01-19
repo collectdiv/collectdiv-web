@@ -35,12 +35,20 @@ function slideOver(event) {
           <input type="text" name="name" placeholder="Name on the card" /><br />
           <input type="text" name="billing-address" placeholder="Billing Street Address" /><br />
           <input type="text" name="billing-city" placeholder="City"> <input type="text" style="width: 60px" name="billing-state" placeholder="State" /> <input type="text" name="billing-zip" placeholder="Zipcode" style="width: 80px"><br />
-          <input type="text" name="credit-card-number" placeholder="Credit Card Number"> </input>
-          <input type="text" name="cvv-number" placeholder="CVV Number" style="width: 90px" /><br />
-          
+          <!--<input type="text" name="credit-card-number" placeholder="Credit Card Number"> </input>
+          <input type="text" name="cvv-number" placeholder="CVV Number" style="width: 90px" /><br />-->
+
           <%= form_for(:reservation, {:url => '/reservations' }) do |f| %>
             <%= f.hidden_field 'study_group_id', {:value => '1'} %>
-            <%= f.submit 'Sign up!', {:class => 'btn btn-success'} %>
+            <%# f.submit 'Sign up!', {:class => 'btn btn-success'} %>
+            <script
+               src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+               data-key="pk_test_TXV4tbffrw66M7DyZuJJUKPD"
+               data-amount="1000"
+               data-name="Collect<div>"
+               data-description="<%= @study_group.name %> ($10.00)"
+               data-image="/128x128.png">
+            </script>
           <% end %>
         </div>
       
