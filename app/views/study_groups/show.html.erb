@@ -21,7 +21,7 @@ function slideOver(event) {
         <%= image_tag @study_group.logo_path %>
       </div> <!-- .span5 -->
       <div class="span5">
-        <%= @study_group.description %>
+        <%= simple_format @study_group.description %>
       </div> <!-- .span5 -->
     </div> <!-- fluid-row -->
     <div class="row-fluid">

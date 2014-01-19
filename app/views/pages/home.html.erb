@@ -4,7 +4,7 @@
 				<div class="col-lg-6">
 					<h1>Self taught doesn't have to mean learning alone.</h1>
 					<form class="form-inline" role="form">
-					  <button type="submit" class="btn btn-warning btn-lg">View groups forming now!</button>
+					  <%= link_to "View groups forming now!", "#groups", {:class => "btn btn-warning btn-lg"} %>
 					</form>					
 				</div><!-- /col-lg-6 -->
 				<div class="col-lg-6">
@@ -16,7 +16,7 @@
 	</div><!-- /headerwrap -->
 
 
-	<div class="container home-container">
+	<a id="groups"><div class="container home-container"></a>
 		<div class="row mt centered">
 			<div class="col-lg-6 col-lg-offset-3">
 				<h1>Month-long virtual study groups for programmers.</h1>
@@ -43,7 +43,7 @@
 
 			<div class="col-lg-4">
 				<center><%= image_tag "codeschool.png", :class => "img-responsive" %></center>
-				<h4>Code School Coffeescript</h4>
+				<h4>Code School CoffeeScript</h4>
 				<small>Starting: February 3</small>
                 <p>Would you like a little cream with your CoffeeScript? If you've tackled JavaScript, why not spend a month in this group and learn how to do more with less code.</p>
                 <%= link_to 'Join Group', '/study_groups/3', {:class => "btn btn-warning btn-lg"} %>
