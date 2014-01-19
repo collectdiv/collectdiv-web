@@ -30,7 +30,7 @@
 				<h4>Michael Hartl’s Ruby on Rails Tutorial</h4>
 				<small>Starting: February 5</small>
 				<p>The quintessential Ruby on Rails tutorial. Challenging, but fun, you'll most certainly complete this resource in one month with the support of a collect<span><</span>div<span>></span>.</p>
-                <button type="submit" class="btn btn-warning btn-lg">Join Group</button>
+                <%= link_to 'Join Group', '/study_groups/1', {:class => "btn btn-warning btn-lg"} %>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
@@ -38,15 +38,15 @@
 				<h4>Codecadmy Javascript track</h4>
 				<small>Starting: January 30</small>
 				<p>Go through this 16 module introduction to JavaScript with a group of your peers. By the end of the month you'll be well on your way to building interactive websites and games.</p>
-                <button type="submit" class="btn btn-warning btn-lg">Join Group</button>
-			</div><!--/col-lg-4 -->
+                <%= link_to 'Join Group', '/study_groups/2', {:class => "btn btn-warning btn-lg"} %>
+            </div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
 				<center><%= image_tag "codeschool.png", :class => "img-responsive" %></center>
 				<h4>Code School Coffeescript</h4>
 				<small>Starting: February 3</small>
-				<p>Would you like a little cream with your CoffeeScript? If you've tackled JavaScript, why not spend a month in this group and learn how to do more with less code.</p>
-                <button type="submit" class="btn btn-warning btn-lg">Join Group</button>
+                <p>Would you like a little cream with your CoffeeScript? If you've tackled JavaScript, why not spend a month in this group and learn how to do more with less code.</p>
+                <%= link_to 'Join Group', '/study_groups/3', {:class => "btn btn-warning btn-lg"} %>
 			</div><!--/col-lg-4 -->
 			
 		</div><!-- /row -->
